@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ATS Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+
+<div class="navbar">
+    <div class="logo">SkillMatch</div>
+</div>
+
+
+<div class="dashboard">
+
+    <h2 style="text-align:center; margin-top:20px;">
+        ATS Score Analysis
+    </h2>
+
+    
+    <div class="donut-wrapper">
+
+        <div class="donut" style="--score: {{ ats_score }};">
+
+            <div class="donut-inner">
+                <h1>{{ ats_score }}%</h1>
+                <span>ATS Score</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <div class="cards">
+
+        <div class="card">
+            <h3>Keyword Match</h3>
+            <p>{{ match_percentage }}%</p>
+        </div>
+
+        <div class="card">
+            <h3>Resume Strength</h3>
+            <p>
+                {% if ats_score >= 75 %}
+                    Strong
+                {% elif ats_score >= 50 %}
+                    Moderate
+                {% else %}
+                    Weak
+                {% endif %}
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Predicted Role</h3>
+            <p>{{ predicted_category }}</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    
+    <div class="card">
+        <h3>Extracted Skills</h3>
+
+        <div class="skills">
+            {% for skill in skills %}
+                <div class="skill">{{ skill }}</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <br>
+
+
+    
+    <div style="text-align:center; margin-top:30px;">
+
+        <a href="/dashboard" class="btn">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

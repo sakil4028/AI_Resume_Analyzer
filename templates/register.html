@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register | ATS AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+
+<div class="login-wrapper">
+
+    
+    <div class="login-left">
+
+        <h1>Create Account 🚀</h1>
+        <p>Register to use ATS Resume Analyzer</p>
+
+        <form method="POST" action="/register">
+
+            <input type="text"
+                   name="username"
+                   class="input"
+                   placeholder="Username"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   class="input"
+                   placeholder="Email"
+                   required>
+
+            <input type="password"
+                   name="password"
+                   class="input"
+                   placeholder="Password"
+                   required>
+
+            <button type="submit" class="btn">
+                Register
+            </button>
+
+        </form>
+        
+
+        
+        <p style="margin-top:20px;">
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+
+    </div>
+
+    
+    <div class="login-right">
+
+        <div style="text-align:center;">
+            <h1>SkillMatch</h1>
+            <p>Smart Resume Analyzer System</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

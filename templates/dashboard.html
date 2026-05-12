@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+
+<div class="navbar">
+
+    <div class="logo">SkillMatch</div>
+
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+</div>
+
+
+
+<div style="
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+">
+
+    <div class="card" style="
+        width:500px;
+        padding:40px;
+        text-align:center;
+    ">
+
+        <h2>AI Resume Analyzer</h2>
+        <p style="color:gray; margin-bottom:20px;">
+            Upload resume and paste job description
+        </p>
+
+        <!-- FORM -->
+        <form action="/upload"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <!-- UPLOAD -->
+            <input class="input"
+                   type="file"
+                   name="resume"
+                   required>
+
+            <!-- JOB DESCRIPTION -->
+            <textarea class="input"
+                      name="job_description"
+                      rows="6"
+                      placeholder="Paste Job Description..."
+                      required></textarea>
+
+            <button class="btn" type="submit"
+                    style="width:100%; margin-top:10px;">
+                Analyze Resume
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

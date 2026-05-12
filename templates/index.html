@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    
+
+    <div class="navbar">
+
+        <div class="logo">
+            ResumeAI
+        </div>
+
+    </div>
+
+   
+
+    <section class="hero">
+
+        <h1>
+            AI Resume Analyzer
+            & ATS Predictor
+        </h1>
+
+        <p>
+            Analyze your resume using
+            Machine Learning & NLP
+        </p>
+
+        
+
+        <div class="upload-box">
+
+            <form action="/upload"
+                  method="POST"
+                  enctype="multipart/form-data">
+
+                <h2>Upload Resume</h2>
+
+                <input type="file"
+                       name="resume"
+                       required>
+
+                <textarea
+                    name="job_description"
+                    rows="10"
+                    placeholder="Paste Job Description Here..."
+                    required></textarea>
+
+                <button class="btn"
+                        type="submit">
+
+                    Analyze Resume
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
