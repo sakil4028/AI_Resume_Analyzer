@@ -1,7 +1,7 @@
 # AI Resume Analyzer 🚀
 
 AI Resume Analyzer is a Flask-based web application that analyzes resumes using NLP and Machine Learning techniques.  
-The system evaluates ATS score, extracts skills, predicts resume category, compares resumes with job descriptions.
+The system evaluates ATS score, extracts skills, predicts resume category, compares resumes with job descriptions, and provides smart feedback for improving resumes.
 
 ---
 
@@ -70,7 +70,13 @@ AI_Resume_Analyzer/
 │   ├── preprocess.py
 │   ├── predict.py
 │   └── ats_score.py
+```
 
+
+```
+
+---
+```
 
 # Machine Learning Features 🧠
 
@@ -88,6 +94,7 @@ Machine learning models are used for:
 
 ---
 
+
 # Future Improvements 🚀
 
 - Resume PDF Report Generation
@@ -98,5 +105,3 @@ Machine learning models are used for:
 - Deep Learning Resume Ranking
 
 ---
-
-
